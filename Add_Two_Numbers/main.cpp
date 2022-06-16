@@ -16,7 +16,7 @@ public:
         ListNode* result = new ListNode;
         ListNode* last = result;
         bool plusOne = 0;
-        while (true){
+        while (l1!=NULL || l2!=NULL){
             last->val = (l1 != nullptr ? l1->val : 0) + (l2 != nullptr ? l2->val : 0) + plusOne;
             if (last->val >9){
                 last->val -= 10;
@@ -25,22 +25,21 @@ public:
                 plusOne = 0;
             }
 
-            if (l1!=NULL || l2!=NULL){
-                ListNode* next = new ListNode;
+
+            if ((l1!=NULL && l1->next != nullptr) || (l2!=NULL && l2->next != nullptr)) {
+                ListNode *next = new ListNode;
                 last->next = next;
                 last = next;
-
-                if (l1!=NULL) l1 = l1->next;
-                if (l2!=NULL) l2 = l2->next;
-            } else{
-                if (plusOne){
-                    ListNode* next = new ListNode;
-                    last->next = next;
-                    last = next;
-                    last->val = 1;
-                }
-                break;
             }
+
+            if (l1!=NULL) l1 = l1->next;
+            if (l2!=NULL) l2 = l2->next;
+        }
+        if (plusOne){
+            ListNode* next = new ListNode;
+            last->next = next;
+            last = next;
+            last->val = 1;
         }
         return result;
     }
