@@ -3,4 +3,4 @@ project(maxSubArray)
 
 set(CMAKE_CXX_STANDARD 17)
 
-add_executable(maxSubArray main.cpp)
+add_executable(maxSubArray main.cpp test_runner.h test_runner.cpp)
