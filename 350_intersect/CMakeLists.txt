@@ -3,4 +3,4 @@ project(350_intersect)
 
 set(CMAKE_CXX_STANDARD 17)
 
-add_executable(350_intersect main.cpp)
+add_executable(350_intersect main.cpp test_runner.h test_runner.cpp)
