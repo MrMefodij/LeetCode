@@ -37,7 +37,7 @@ public:
         } else if (list1==NULL && list2!=NULL){
             last->val = list2->val;
             last->next = list2->next;
-        } 
+        }
         return result;
     }
 };
@@ -55,7 +55,6 @@ void SimpleTest(){
         ListNode *first = &l1_3;
         ListNode *second = &l2_3;
         ListNode *result = sl.mergeTwoLists(first, second);
-        std::cout << std::endl;
     }
     {
         Solution sl;
