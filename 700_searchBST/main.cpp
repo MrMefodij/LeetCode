@@ -4,14 +4,21 @@
 
 class Solution {
 public:
-    std::vector<TreeNode*> treeLevel (const std::vector<TreeNode*>& levelTree){
+    std::vector<TreeNode*> treeLevel (const std::vector<TreeNode*>& levelTree, int val){
         std::vector<TreeNode*> result;
         for (const auto a : levelTree) {
-            if (a->left != nullptr){
-                result.push_back(a->left);
+            if (a->val == val){
+                return {a};
             }
-            if (a->right != nullptr){
-                result.push_back(a->right);
+            if (a->val > val) {
+                if (a->left != nullptr) {
+                    result.push_back(a->left);
+                }
+            }
+            if (a->val < val) {
+                if (a->right != nullptr) {
+                    result.push_back(a->right);
+                }
             }
         }
         if (result.size()>0){
@@ -30,7 +37,7 @@ public:
                     return a;
                 }
             }
-            treeLevel_ = treeLevel(treeLevel_);
+            treeLevel_ = treeLevel(treeLevel_, val);
         }
         return nullptr;
     }
