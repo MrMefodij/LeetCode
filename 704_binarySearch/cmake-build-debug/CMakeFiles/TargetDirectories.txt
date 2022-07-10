@@ -1,3 +1,0 @@
-/Users/amefodev/work/LeetCode/704_binarySearch/cmake-build-debug/CMakeFiles/704_binarySearch.dir
-/Users/amefodev/work/LeetCode/704_binarySearch/cmake-build-debug/CMakeFiles/edit_cache.dir
-/Users/amefodev/work/LeetCode/704_binarySearch/cmake-build-debug/CMakeFiles/rebuild_cache.dir
