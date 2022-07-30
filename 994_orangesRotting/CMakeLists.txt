@@ -3,4 +3,4 @@ project(994_orangesRotting)
 
 set(CMAKE_CXX_STANDARD 17)
 
-add_executable(994_orangesRotting main.cpp)
+add_executable(994_orangesRotting main.cpp ../test_runner/test_runner.cpp ../test_runner/test_runner.h)
