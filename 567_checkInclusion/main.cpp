@@ -1,5 +1,4 @@
 #include <iostream>
-#include <cstring>
 #include <array>
 #include "../test_runner/test_runner.h"
 
